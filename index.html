@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Folia para Android · Cuida tus plantas, sin olvidos</title>
+  <meta name="description" content="Descarga Folia para Android: recordatorios de riego, asistente botánico con IA y apodos chistosos para tus plantas. Gratis." />
+  <meta name="theme-color" content="#2F5D46" />
+  <meta property="og:title" content="Folia · Cuida tus plantas, sin olvidos" />
+  <meta property="og:description" content="Recordatorios de riego, fichas de cuidado con IA y apodos para tus plantas. Descárgala gratis para Android." />
+  <meta property="og:image" content="assets/icon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hojas flotando de fondo (las genera main.js) -->
+  <div class="leaves" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Folia, inicio">
+        <img src="assets/icon.png" alt="" width="36" height="36" />
+        <span>Folia</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#funciones">Funciones</a>
+        <a href="#instalar">Instalar</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <a class="btn btn-small btn-primary" href="#descargar" data-scroll>Descargar</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" id="descargar">
+      <div class="hero-copy">
+        <div class="eyebrow reveal">
+          <svg class="i" viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.87 3.23a11.4 11.4 0 0 0-9.82 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+          Gratis para Android
+        </div>
+        <h1 class="reveal">
+          Cuida tus plantas,<br />
+          <em class="shine">sin olvidos.</em>
+        </h1>
+        <p class="lead reveal">
+          Folia te avisa cuándo regar cada planta, completa sus cuidados con inteligencia artificial
+          —por nombre o por foto— y hasta les inventa un apodo que te hará reír.
+        </p>
+
+        <div class="download reveal">
+          <a class="btn btn-primary btn-download" id="download-btn" href="#">
+            <span class="btn-shine" aria-hidden="true"></span>
+            <svg class="i dl-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            <svg class="i dl-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <span class="dl-text">
+              <span class="dl-label">Descargar para Android</span>
+              <small class="dl-meta" id="download-meta">APK</small>
+            </span>
+          </a>
+          <div class="download-notes">
+            <span><svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg> Sin anuncios</span>
+            <span><svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h10"/></svg> <span id="min-android">Android 8 o superior</span></span>
+          </div>
+          <p class="platform-note" id="platform-note" hidden></p>
+        </div>
+      </div>
+
+      <!-- Teléfono con pantallas animadas -->
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="orbit orbit-1"><span>💧</span></div>
+        <div class="orbit orbit-2"><span>✨</span></div>
+        <div class="orbit orbit-3"><span>🌿</span></div>
+
+        <div class="phone" id="phone">
+          <div class="phone-notch"></div>
+          <div class="screens">
+            <!-- Pantalla 1: Inicio -->
+            <div class="screen is-active" data-screen="0">
+              <p class="s-caption">Buenos días,</p>
+              <p class="s-title">Ana</p>
+              <p class="s-caption">2 plantas necesitan agua hoy</p>
+              <div class="s-due">
+                <div class="s-thumb"><svg viewBox="0 0 64 64"><use href="#leaf" fill="#FBFAF5" /></svg></div>
+                <div class="s-due-text"><b>Doña Hojas</b><i>Regar hoy</i></div>
+                <div class="s-water">
+                  <svg viewBox="-1 -1.1 2 2.2"><use href="#drop" fill="#fff" /></svg>
+                  <span class="splash d1"></span><span class="splash d2"></span><span class="splash d3"></span>
+                </div>
+              </div>
+              <div class="s-grid">
+                <div class="s-card c1"><b class="pill">💧 Hoy</b><b class="label">Quesito Verde</b></div>
+                <div class="s-card c2"><b class="pill">En 3 días</b><b class="label">El Potho Ricos</b></div>
+                <div class="s-card c3"><b class="pill">En 9 días</b><b class="label">Espino Banderas</b></div>
+                <div class="s-card c4"><b class="pill">Mañana</b><b class="label">Lady Desmayos</b></div>
+              </div>
+              <div class="s-tabbar"><span class="on">🌿 Jardín</span><span class="plus">+</span><span>👤 Perfil</span></div>
+            </div>
+
+            <!-- Pantalla 2: Ficha de riego -->
+            <div class="screen" data-screen="1">
+              <div class="s-hero"><svg viewBox="0 0 64 64"><use href="#leaf" fill="#FBFAF5" /></svg></div>
+              <div class="s-sheet">
+                <p class="s-overline">Sala · junto a la ventana</p>
+                <p class="s-title">Doña Hojas</p>
+                <p class="s-caption"><i>Monstera deliciosa</i></p>
+                <div class="s-ring-card">
+                  <svg class="s-ring" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="42" class="ring-bg" />
+                    <circle cx="50" cy="50" r="42" class="ring-fg" />
+                  </svg>
+                  <div><p class="s-overline">Próximo riego</p><p class="s-big">En 4 días</p><p class="s-caption">Cada 7 días</p></div>
+                </div>
+                <div class="s-button">💧 Regar ahora</div>
+                <div class="s-facts"><span>☀️ Indirecta</span><span>💦 Alta</span><span>🌡️ 18–27 °C</span></div>
+              </div>
+            </div>
+
+            <!-- Pantalla 3: Asistente IA -->
+            <div class="screen" data-screen="2">
+              <p class="s-title small">Nueva planta</p>
+              <div class="s-photo">📸</div>
+              <div class="s-input"><span>Nombre</span><b class="typing" data-text="Monstera"></b></div>
+              <div class="s-ai">
+                <div class="s-ai-head"><span class="sparkle">✨</span><div><b>Asistente botánico</b><i>Completando la ficha…</i></div></div>
+                <div class="s-chips">
+                  <span style="--d:0">💧 Cada 7 días</span>
+                  <span style="--d:1">☀️ Indirecta</span>
+                  <span style="--d:2">🐾 Tóxica</span>
+                  <span style="--d:3">🌡️ 18–27 °C</span>
+                </div>
+              </div>
+              <div class="s-input"><span>Apodo ✨</span><b class="nick">Monstera Carey</b></div>
+            </div>
+          </div>
+          <div class="screen-dots"><i class="on"></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CINTA DE APODOS ============ -->
+    <section class="marquee" aria-label="Apodos generados por la IA">
+      <div class="marquee-track">
+        <span>🌵 Espino Banderas</span><span>🌱 Monstera Carey</span><span>🌿 El Potho Ricos</span>
+        <span>🌸 Lady Desmayos</span><span>🌱 Alba Haka</span><span>🍃 Sabilinda</span>
+        <span>🧀 Quesito Verde</span><span>🌵 Cactulio César</span><span>🌿 Don Albahacardo</span>
+        <span>🌱 La Monsterrible</span>
+      </div>
+    </section>
+
+    <!-- ============ FUNCIONES ============ -->
+    <section class="features wrap" id="funciones">
+      <p class="section-eyebrow reveal">Funciones</p>
+      <h2 class="reveal">Todo lo que tus plantas necesitan</h2>
+      <div class="feature-grid">
+        <article class="feature reveal" style="--tint: var(--water-soft); --ink: var(--water)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          </div>
+          <h3>Recordatorios a tu medida</h3>
+          <p>Te avisa el día que le toca a cada planta, o solo los días y a la hora que tú elijas.</p>
+        </article>
+        <article class="feature reveal" style="--tint: var(--primary-soft); --ink: var(--primary)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg>
+          </div>
+          <h3>Asistente botánico con IA</h3>
+          <p>Escribe el nombre o toma una foto: riego, luz, humedad, temperatura y consejos en segundos.</p>
+        </article>
+        <article class="feature reveal" style="--tint: var(--accent-soft); --ink: var(--accent)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3>Apodos con humor</h3>
+          <p>¿Quesito Verde? ¿Espino Banderas? Deja que la IA bautice a tus plantas con un chiste.</p>
+        </article>
+        <article class="feature reveal" style="--tint: var(--primary-soft); --ink: var(--primary)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          </div>
+          <h3>Historial de riegos</h3>
+          <p>Registra cada riego con un toque (y deshazlo si te equivocaste). Tu jardín, siempre al día.</p>
+        </article>
+        <article class="feature reveal" style="--tint: var(--water-soft); --ink: var(--water)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
+          </div>
+          <h3>Identifica por foto</h3>
+          <p>¿No sabes qué planta es? Tómale una foto y Folia la reconoce y llena su ficha de cuidados.</p>
+        </article>
+        <article class="feature reveal" style="--tint: var(--accent-soft); --ink: var(--accent)">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </div>
+          <h3>Modo claro y oscuro</h3>
+          <p>Un diseño limpio y elegante que se adapta a tu teléfono, de día y de noche.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO INSTALAR ============ -->
+    <section class="install wrap" id="instalar">
+      <p class="section-eyebrow reveal">En menos de un minuto</p>
+      <h2 class="reveal">Cómo instalarla</h2>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">1</span>
+          <div>
+            <h3>Descarga el archivo</h3>
+            <p>Toca <b>Descargar para Android</b>. Se guardará el archivo <b>Folia.apk</b> en tu teléfono.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">2</span>
+          <div>
+            <h3>Permite la instalación</h3>
+            <p>Al abrirlo, Android te pedirá permitir <b>instalar apps de esta fuente</b>. Actívalo solo para tu navegador.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">3</span>
+          <div>
+            <h3>¡Listo, a cuidar plantas!</h3>
+            <p>Toca <b>Instalar</b>, abre Folia y crea tu perfil. Tu primera planta te espera. 🌱</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq wrap" id="faq">
+      <p class="section-eyebrow reveal">Preguntas frecuentes</p>
+      <h2 class="reveal">¿Dudas?</h2>
+      <div class="faq-list">
+        <details class="reveal">
+          <summary>¿Es seguro instalar un APK?</summary>
+          <p>Sí, siempre que lo descargues desde esta página oficial. Android muestra un aviso porque la app no viene de Google Play, pero es la misma app firmada por nosotros.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Nada. Folia es gratis y no tiene anuncios.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Qué permisos necesita?</summary>
+          <p>Notificaciones (para los recordatorios de riego) y, si quieres, cámara y galería para las fotos de tus plantas. Todo es opcional.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Dónde se guardan mis datos?</summary>
+          <p>En tu propio teléfono. Solo las fotos o nombres que envías al asistente IA salen del dispositivo para ser analizados.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Hay versión para iPhone?</summary>
+          <p>Muy pronto. Por ahora Folia está disponible para Android.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Cómo actualizo la app?</summary>
+          <p>Descarga el nuevo APK desde esta página e instálalo encima: tus plantas y tu perfil se conservan.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta wrap reveal">
+      <div class="cta-card">
+        <div class="cta-leaf" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#leaf" /></svg></div>
+        <img src="assets/icon.png" alt="" width="80" height="80" class="cta-icon" />
+        <h2>Tus plantas te lo van a agradecer</h2>
+        <p>Descarga Folia y no vuelvas a olvidar un riego.</p>
+        <a class="btn btn-light" href="#descargar" data-scroll>
+          <svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          Descargar gratis
+        </a>
+        <div class="qr" id="qr-box" hidden>
+          <div id="qr"></div>
+          <p>¿Estás en la computadora? Escanea con tu celular.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="28" height="28" /><span>Folia</span></a>
+      <p>Hecho con 💚 para tus plantas · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Símbolos reutilizables: la hoja y la gota de la app -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="leaf" viewBox="0 0 64 64"><path d="M52 10C30 10 14 22 14 40c0 5 1.5 9 4 12 2-10 8-19 18-25-8 7-13 15-15 27 3 1 6 2 10 2 18 0 22-20 21-46z" /></symbol>
+    <symbol id="drop" viewBox="-1 -1.1 2 2.2"><path d="M0 -1C0.5 -0.35 0.72 0.05 0.72 0.34A0.72 0.72 0 0 1 -0.72 0.34C-0.72 0.05 -0.5 -0.35 0 -1Z" /></symbol>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="config.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
